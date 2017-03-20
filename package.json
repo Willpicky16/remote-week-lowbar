@@ -1,0 +1,34 @@
+{
+  "name": "remote-week-lowbar",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lowbar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "scripts": {
+    "test": "mocha ./spec/",
+    "lint": "eslint ./",
+    "posttest": "npm run lint",
+    "precommit": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Willpicky16/remote-week-lowbar.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Willpicky16/remote-week-lowbar/issues"
+  },
+  "homepage": "https://github.com/Willpicky16/remote-week-lowbar#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "eslint": "^3.18.0",
+    "husky": "^0.13.2"
+  },
+  "dependencies": {
+    "sinon": "^2.1.0"
+  }
+}
