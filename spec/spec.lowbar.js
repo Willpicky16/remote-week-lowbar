@@ -70,4 +70,21 @@ describe('_', () => {
      expect(actual).to.eql(expected);
    });
   });
+
+  // INDEXOF
+  describe('#indexof', () => {
+    it('is a function', () => {
+      expect(_.indexOf).to.be.a('function');
+    });
+    it('returns the index at which the element can be found in the array with only numbers', () => {
+      var actual = _.indexOf([100, 293, 12, 1, 204], 12);
+     var expected = 2;
+     expect(actual).to.eql(expected);
+   });
+   it('returns the index at which the element can be found in the array with numbers and strings', () => {
+     var actual = _.indexOf(['Hello', 100, 293, 12, 'Test', 1, 204], 'Test');
+    var expected = 4;
+    expect(actual).to.eql(expected);
+  });
+  });
 });
