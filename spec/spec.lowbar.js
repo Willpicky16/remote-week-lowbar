@@ -90,7 +90,7 @@ describe('_', () => {
 
  // FILTER
  describe('#filter', () => {
-   var res = _.filter([10, 22, 31, 52, 43, 64, 93], function (num) {
+   let res = _.filter([10, 22, 31, 52, 43, 64, 93], function (num) {
      if (num % 2 === 0) return num;
    });
    it('is a function', () => {
@@ -99,6 +99,21 @@ describe('_', () => {
    it('returns only numbers that are even', () => {
      let actual = res;
      let expected = [10, 22, 52, 64];
+     expect(actual).to.eql(expected);
+   });
+ });
+
+ // REJECT
+ describe('#reject', () => {
+   let res = _.reject([10, 22, 31, 52, 43, 64, 93], function (num) {
+     if (num % 2 === 0) return num;
+   });
+   it('is a function', () => {
+     expect(_.reject).to.be.a('function');
+   });
+   it('returns only numbers that are odd', function () {
+     let actual = res;
+     let expected = [31, 43, 93];
      expect(actual).to.eql(expected);
    });
  });
