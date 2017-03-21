@@ -44,4 +44,20 @@ describe('_', () => {
       expect(actual).to.eql(expected);
     });
   });
+
+  // EACH
+  describe('#each', () => {
+    let res = [];
+    _.each([1, 2, 3], function (n) {
+      return res.push(n + 1);
+    });
+    it('is a function', () => {
+      expect(_.each).to.be.a('function');
+    });
+    it('interate with the test given', () => {
+      var actual = res;
+     var expected = [2, 3, 4];
+     expect(actual).to.eql(expected);
+   });
+  });
 });
