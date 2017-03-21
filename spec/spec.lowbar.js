@@ -65,9 +65,9 @@ describe('_', () => {
       expect(_.each).to.be.a('function');
     });
     it('interate with the test given', () => {
-      var actual = res;
-     var expected = [2, 3, 4];
-     expect(actual).to.eql(expected);
+      let actual = res;
+      let expected = [2, 3, 4];
+      expect(actual).to.eql(expected);
    });
   });
 
@@ -77,14 +77,29 @@ describe('_', () => {
       expect(_.indexOf).to.be.a('function');
     });
     it('returns the index at which the element can be found in the array with only numbers', () => {
-      var actual = _.indexOf([100, 293, 12, 1, 204], 12);
-     var expected = 2;
-     expect(actual).to.eql(expected);
+      let actual = _.indexOf([100, 293, 12, 1, 204], 12);
+      let expected = 2;
+      expect(actual).to.eql(expected);
    });
    it('returns the index at which the element can be found in the array with numbers and strings', () => {
-     var actual = _.indexOf(['Hello', 100, 293, 12, 'Test', 1, 204], 'Test');
-    var expected = 4;
-    expect(actual).to.eql(expected);
+     let actual = _.indexOf(['Hello', 100, 293, 12, 'Test', 1, 204], 'Test');
+     let expected = 4;
+     expect(actual).to.eql(expected);
   });
-  });
+ });
+
+ // FILTER
+ describe('#filter', () => {
+   var res = _.filter([10, 22, 31, 52, 43, 64, 93], function (num) {
+     if (num % 2 === 0) return num;
+   });
+   it('is a function', () => {
+     expect(_.filter).to.be.a('function');
+   });
+   it('returns only numbers that are even', () => {
+     let actual = res;
+     let expected = [10, 22, 52, 64];
+     expect(actual).to.eql(expected);
+   });
+ });
 });
