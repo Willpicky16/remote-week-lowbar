@@ -26,10 +26,22 @@ describe('_', () => {
     it('is a function', () => {
       expect(_.first).to.be.a('function');
     });
-    it('returns the first element in array', () => {
+    it('returns the first element in an array', () => {
       let actual = _.first([10, 20, 83, 100, 49]);
       let expected = 10;
       expect(actual).to.eql(expected);
-    })
+    });
+  });
+
+  // LAST
+  describe('#last', () => {
+    it('is a function', () => {
+      expect(_.last).to.be.a('function');
+    });
+    it('returns the last element in an array', () => {
+      let actual = _.last([10, 20, 83, 100, 49]);
+      let expected = 49;
+      expect(actual).to.eql(expected);
+    });
   });
 });
