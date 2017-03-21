@@ -28,6 +28,10 @@ _.each = function (list, iteratee, context) {
   return list;
 };
 
+_.indexOf = function (arr, num) {
+  return arr.indexOf(num);
+};
+
 if (typeof module !== 'undefined') {
   module.exports = _;
 }
