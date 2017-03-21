@@ -26,9 +26,14 @@ describe('_', () => {
     it('is a function', () => {
       expect(_.first).to.be.a('function');
     });
-    it('returns the first element in an array', () => {
+    it('returns the first element in an array with just numbers', () => {
       let actual = _.first([10, 20, 83, 100, 49]);
       let expected = 10;
+      expect(actual).to.eql(expected);
+    });
+    it('returns the first element in an array with numbers and strings', () => {
+      let actual = _.first(['first', 10, 20, 83, 100, 49, 'last']);
+      let expected = 'first';
       expect(actual).to.eql(expected);
     });
   });
@@ -38,9 +43,14 @@ describe('_', () => {
     it('is a function', () => {
       expect(_.last).to.be.a('function');
     });
-    it('returns the last element in an array', () => {
+    it('returns the last element in an array with numbers', () => {
       let actual = _.last([10, 20, 83, 100, 49]);
       let expected = 49;
+      expect(actual).to.eql(expected);
+    });
+    it('returns the first element in an array with numbers and strings', () => {
+      let actual = _.last(['first', 10, 20, 83, 100, 49, 'last']);
+      let expected = 'last';
       expect(actual).to.eql(expected);
     });
   });
