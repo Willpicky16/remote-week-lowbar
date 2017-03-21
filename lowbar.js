@@ -32,6 +32,15 @@ _.indexOf = function (arr, num) {
   return arr.indexOf(num);
 };
 
+_.filter = function (list, func) {
+  let res = [];
+
+  for (let i = 0; i < list.length; i++) {
+    func(list[i]) ? res.push(list[i]) : list[i];
+  }
+  return res;
+};
+
 if (typeof module !== 'undefined') {
   module.exports = _;
 }
