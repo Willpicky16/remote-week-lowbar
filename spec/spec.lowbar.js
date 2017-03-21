@@ -20,4 +20,16 @@ describe('_', () => {
       expect(actual).to.eql(expected);
     });
   });
+
+  // FIRST
+  describe('#first', () => {
+    it('is a function', () => {
+      expect(_.first).to.be.a('function');
+    });
+    it('returns the first element in array', () => {
+      let actual = _.first([10, 20, 83, 100, 49]);
+      let expected = 10;
+      expect(actual).to.eql(expected);
+    })
+  });
 });
