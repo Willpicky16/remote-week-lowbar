@@ -41,6 +41,16 @@ _.filter = function (list, func) {
   return res;
 };
 
+_.reject = function (list, fun) {
+  var res = [];
+
+  for (var i = 0; i < list.length; i++) {
+    fun(list[i]) ? list[i] : res.push(list[i]);
+  }
+
+  return res;
+};
+
 if (typeof module !== 'undefined') {
   module.exports = _;
 }
